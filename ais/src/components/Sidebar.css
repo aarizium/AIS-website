@@ -1,0 +1,78 @@
+/* Sidebar.css */
+
+/* Sidebar Default (Hidden) */
+.sidebar-container {
+  position: fixed;
+  left: -250px; /* Hidden by default */
+  width: 250px;
+  height: 100%;
+  background: rgb(39, 47, 100);
+  color: white;
+  transition: left 0.3s ease-in-out;
+  padding-top: 20px;
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Sidebar Open */
+.sidebar-container.open {
+  left: 0; /* Slide in */
+}
+
+/* Sidebar List */
+.sidebar-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-container ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-container ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar-container ul li a:hover {
+  background: rgb(254, 182, 60);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Toggle Button */
+.menu-btn {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1100; /* Ensure button is above sidebar */
+}
+
+.menu-btn:hover {
+  color: #f2f3f5;
+}
+
+/* 🔹 Mobile: Sidebar takes full width */
+@media (max-width: 768px) {
+  .sidebar-container {
+    width: 100%; /* Full screen width */
+    left: -100%; /* Hidden */
+  }
+
+  .sidebar-container.open {
+    left: 0; /* Show full sidebar */
+  }
+}
+
+/* 🔹 Tablet & Larger: Sidebar remains compact */
+@media (min-width: 769px) {
+  .sidebar-container {
+    width: 250px;
+  }
+}
