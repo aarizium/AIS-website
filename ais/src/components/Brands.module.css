@@ -1,0 +1,79 @@
+.Brandcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers images */
+    align-items: center;
+    gap: 20px; /* Adds spacing between images */
+    padding: 20px;
+}
+
+.Brandimages {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Adjust image size for larger screens */
+@media (min-width: 768px) {
+    .Brandimages {
+        max-width: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .Brandimages {
+        max-width: 200px;
+    }
+}
+
+/* Centering the button below images */
+.buttoncontainer {
+    display: flex;
+    justify-content: center; /* Centers the button */
+    align-items: center;
+    margin-top: 20px; /* Spacing from the images */
+    width: 100%;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 22px;
+    background-color:  rgb(254, 182, 60,0.7); /* Blue button */
+    color: #222;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+/* Hover effect */
+.button:hover {
+    background-color: rgb(254, 182, 60);
+    border-radius: 8px;
+}
+
+/* Responsive button size */
+@media (max-width: 768px) {
+    .button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}
+
+.genAi {
+    width: 100vw; /* Full viewport width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra spacing */
+    margin: 0 auto; /* Center the image */
+    object-fit: cover; /* Ensure it covers the space properly */
+}
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .genAi {
+        width: 100vw; /* Full width */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

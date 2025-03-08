@@ -1,0 +1,116 @@
+/* Navbar custom background color */
+.navbar {
+    background-color: #222;
+    padding: 15px;
+    border-bottom: 3px solid #007bff;
+}
+
+/* Custom styles for nav links */
+.navLink {
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Change color on hover */
+.navLink:hover {
+    color: rgb(254, 182, 60) !important;
+}
+
+/* Search Bar Container */
+.searchContainer {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Custom Search Bar Styling */
+.searchbar {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #007bff;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Wider search bar on large screens */
+@media (min-width: 992px) {
+    .searchbar {
+        width: 400px;
+    }
+}
+
+/* Search bar focus effect */
+.searchbar:focus {
+    border-color: #ff6600;
+    box-shadow: 0 0 8px rgba(255, 102, 0, 0.5);
+}
+
+/* Search Button */
+.searchBtn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid #ffcc00;
+    background-color: transparent;
+    color: #ffcc00;
+    transition: 0.3s ease-in-out;
+}
+
+.searchBtn:hover {
+    background-color: rgb(254, 182, 60);
+    color: #222;
+}
+
+/* Auth Buttons */
+.authButtons {
+    margin-left: auto; /* Pushes buttons to the extreme right */
+}
+
+/* Login button styles */
+.loginBtn {
+    border-color: #ffcc00;
+    color: #ffcc00;
+    transition: 0.3s ease-in-out;
+}
+
+/* Login button hover */
+.loginBtn:hover {
+    background-color: rgb(254, 182, 60);
+    color: #222;
+}
+
+/* Signup button modifications */
+.signupBtn {
+    border-color: #ffcc00;
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+
+/* Signup button hover */
+.signupBtn:hover {
+    background-color: #222;
+    color:  rgb(254, 182, 60);
+}
+
+/* Responsive Navbar Adjustments */
+@media (max-width: 992px) {
+    .navbar-collapse {
+        text-align: center;
+    }
+    
+    .searchContainer {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .authButtons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
