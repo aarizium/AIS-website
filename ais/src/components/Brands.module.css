@@ -61,19 +61,3 @@
         padding: 10px 20px;
     }
 }
-
-.genAi {
-    width: 100vw; /* Full viewport width */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove extra spacing */
-    margin: 0 auto; /* Center the image */
-    object-fit: cover; /* Ensure it covers the space properly */
-}
-
-/* Ensure responsiveness */
-@media (max-width: 768px) {
-    .genAi {
-        width: 100vw; /* Full width */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
