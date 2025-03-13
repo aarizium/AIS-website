@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    width: 100%;
+    gap: 5px; /* Adjust spacing between images */
+    justify-content: center;
+    align-items: center;
+}
+
+.image {
+    flex: 1;
+    width: 33.33%; /* Ensures all three images fit in one row */
+    height: 300px; /* Adjust this based on design preference */
+    object-fit: cover; /* Crops excess height while keeping width full */
+    max-width: 100%;
+    
+}
+
+
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .image {
+        height: 250px; /* Slightly smaller for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack images vertically on small screens */
+        gap: 10px;
+    }
+
+    .image {
+        width: 100%;
+        height: 200px; /* Adjust height for better mobile view */
+    }
+}
