@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./Navbar.module.css";
 
 const SidebarButton = ({ toggleSidebar }) => {
   return (
-    <button className="menu-btn" onClick={toggleSidebar}>
+    <button className={styles.menuBtn} onClick={toggleSidebar}>
       ☰ 
     </button>
   );
