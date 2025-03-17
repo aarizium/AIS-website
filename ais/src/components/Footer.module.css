@@ -1,0 +1,16 @@
+.maincontainer {
+  background-color: rgb(39, 47, 100);
+  color: white;
+ 
+}
+.company{
+  background-color: rgb(39, 47, 100);
+  color: rgb(254, 182, 60);
+}
+.listcomp{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.footerlinks:hover{
+  color: rgb(254, 182, 60) !important;
+}
