@@ -13,6 +13,7 @@ function App() {
       <Brands />
       <Categories />
       <Gallery />
+      
       <Footer />
     </>
   );
