@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; // Import Link to navigate
 import styles from "./Navbar.module.css";
 import SidebarButton from "./SidebarButton";
 import Sidebar from "./Sidebar";
+import { useCart } from "./context/CartContext"; // 👈 Import useCart
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { cartItems } = useCart(); // 👈 Get cartItems from context
 
   const toggleSidebar = () => {
     setIsSidebarOpen((prev) => !prev);
@@ -13,7 +16,6 @@ const Navbar = () => {
   return (
     <>
       <header className={styles.navbarContainer}>
-        {/* Sidebar Toggle Button */}
         <SidebarButton toggleSidebar={toggleSidebar} />
 
         {/* Navigation Menu */}
@@ -29,18 +31,31 @@ const Navbar = () => {
 
         {/* Search Bar */}
         <div className={styles.searchContainer}>
-          <input type="text" placeholder="Search..." className={styles.searchbar} />
-          <button className={styles.searchBtn}>🔍</button>
+          <input
+            type="text"
+            placeholder="🔍  Search products, brands, categories..."
+            className={styles.searchbar}
+          />
         </div>
 
-        {/* Authentication Buttons */}
-        <div className={styles.authButtons}>
+        {/* Right Buttons */}
+        <div className={styles.rightButtons}>
+          {/* Cart */}
+          <div className={styles.cartButton}>
+            <Link to="/cart"> {/* Navigate to Cart Page */}
+              🛒
+              <span className={styles.cartCount}>
+                {Array.isArray(cartItems) ? cartItems.length : 0}
+              </span>
+            </Link>
+          </div>
+
+          {/* Auth Buttons */}
           <button className={styles.loginBtn}>Login</button>
           <button className={styles.signupBtn}>Sign Up</button>
         </div>
       </header>
 
-      {/* Sidebar Component */}
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
     </>
   );

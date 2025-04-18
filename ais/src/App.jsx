@@ -7,8 +7,10 @@ import Navbar from "./components/Navbar";
 import Brands from "./components/Brands";
 import Header from "./components/Header";
 import Categories from "./components/Categories";
+import ProductDetails from "./components/product_details/ProductDetails";
 import Gallery from "./components/Gallery";
 import SecondPage from "./components/product_categories/SecondPage"; // Import SecondPage
+import CartPage from "./components/CartPage"; // Import CartPage
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,6 +30,8 @@ function App() {
             <Gallery />
           </>} />
           <Route path="/categories/:name" element={<SecondPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/cart" element={<CartPage />} /> {/* Route for Cart Page */}
         </Routes>
 
         <Footer />
